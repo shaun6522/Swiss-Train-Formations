@@ -1,7 +1,7 @@
 import logger from "../utils/logger.js";
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const client = new MongoClient(process.env.DBURI, {
+const client = new MongoClient(process.env.DB_URI, {
   tlsCertificateKeyFile: process.env.X509_CRED,
   serverApi: ServerApiVersion.v1,
 });

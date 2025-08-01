@@ -32,7 +32,10 @@ app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(helmet());
 
 app.use(limiter);
-app.set("trust proxy", parseInt(process.env.PROXY_COUNT));
+
+if (process.env.PROXY_COUNT) {
+  app.set("trust proxy", parseInt(process.env.PROXY_COUNT));
+}
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/shared", express.static(path.join(__dirname, "shared")));

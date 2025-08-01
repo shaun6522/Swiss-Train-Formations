@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
-const OTD_AUTH = process.env.OTDAUTH;
-const OTD_VEHICLE_ENDPOINT = process.env.OTDVEHICLEENDPOINT;
+const OTD_AUTH = process.env.OTD_AUTH;
+const OTD_VEHICLE_ENDPOINT = process.env.OTD_VEHICLE_ENDPOINT;
 
 export async function getServiceDetails(evu, operationDate, trainNumber) {
   const reqUrl = `${OTD_VEHICLE_ENDPOINT}?evu=${evu}&operationDate=${operationDate}&trainNumber=${trainNumber}`;
