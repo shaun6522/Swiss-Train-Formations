@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwissTF - About</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  </head>
+  <body>
+    <div class="wholeThing">
+      <%- include("partials/navbar") %>
+      <div class="firstBit">
+        <div class="flex-container">
+          <div class="about-banner">
+            <h2>About</h2>
+          </div>
+          <div class="about-info">
+            <p>This website allows you to search for the formation of rail services in Switzerland. Simply enter the train operator and number to see the expected vehicle formation.</p>
+            <p>There are a few limitations:</p>
+            <ul class="about-list">
+              <li>You can only search for services departing <b>today</b> or up to <b>two days</b> in the future (although I have yet to find a formation loaded that far in advance)</li>
+              <li>Not all services/operators are available - notably formations do not appear to be available for non-Swiss vehicles and for services that start/terminate in a different country</li>
+              <li>It is not possible to search by specific vehicle number</li>
+              <li>The system only allows 5 queries per minute, so I cache the searches but you may still be rate limited</li>
+            </ul>
+            <p><br>Despite these limitations, I hope this site proves useful for helping you know what to expect on a given service. All data comes from <a href="https://opentransportdata.swiss" target="_blank" rel="noopener noreferrer">opentransportdata.swiss</a> and I am not responsible for any inaccuracies in the data they provide. I'm also not an actual web developer so this site may break at any time!<br><br><br><br></p>
+          </div>
+          <div class="changelog">
+            <h2>Changelog 30/7/25:</h2>
+            <p>Reworked recent page</p>
+            <p>Fixed some vehicle formatting issues</p>
+            <p>Fixed site-wide rate limiting</p>
+          </div>
+          <div class="known-errors">
+            <h2>Known issues:</h2>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>

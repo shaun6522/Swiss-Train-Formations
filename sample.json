@@ -1,0 +1,2943 @@
+{
+  "vehicleJourneyType": "VehicleJourneyVehicleBased",
+  "lastUpdate": "2025-07-22T07:57:33.244",
+  "journeyMetaInformation": {
+    "operationDate": "2025-07-22",
+    "SJYID": "ch:1:sjyid:100001:19226-001"
+  },
+  "trainMetaInformation": {
+    "trainNumber": 19226,
+    "toCode": "11",
+    "runs": "J"
+  },
+  "formations": [
+    {
+      "metaInformation": {
+        "length": 197.6,
+        "numberAxis": 32,
+        "numberSeats": 690,
+        "numberVehicles": 8
+      },
+      "formationVehicles": [
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3008,
+            "typeCodeName": "Bt+",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "8633031",
+            "checkNumber": "0",
+            "evn": "50 85 86-33 031-0",
+            "parentEvn": null
+          },
+          "position": 1,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "F",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "F,E",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "F,E",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": false
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 132,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3006,
+            "typeCodeName": "AB+",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "3633035",
+            "checkNumber": "2",
+            "evn": "50 85 36-33 035-2",
+            "parentEvn": null
+          },
+          "position": 2,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "F",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 81,
+            "number2class": 34,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3007,
+            "typeCodeName": "B-NDW",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "2673001",
+            "checkNumber": "7",
+            "evn": "50 85 26-73 001-7",
+            "parentEvn": null
+          },
+          "position": 3,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "B,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "A,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "F,E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "E,D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 98,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": true,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 1055,
+            "typeCodeName": "Re450+",
+            "buildTypeCode": "91",
+            "countryCode": "85",
+            "vehicleNumber": "4450030",
+            "checkNumber": "2",
+            "evn": "91 85 4 450 030-2",
+            "parentEvn": null
+          },
+          "position": 4,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B,C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "E",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "E,D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            }
+          ],
+          "vehicleProperties": {
+            "length": 18.4,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 0,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": false,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3008,
+            "typeCodeName": "Bt+",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "8633069",
+            "checkNumber": "0",
+            "evn": "50 85 86-33 069-0",
+            "parentEvn": null
+          },
+          "position": 5,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C,D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "A,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "C,D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "E,D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "B,A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 132,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3006,
+            "typeCodeName": "AB+",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "3633040",
+            "checkNumber": "2",
+            "evn": "50 85 36-33 040-2",
+            "parentEvn": null
+          },
+          "position": 6,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "D,E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 81,
+            "number2class": 34,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 3007,
+            "typeCodeName": "B-NDW",
+            "buildTypeCode": "50",
+            "countryCode": "85",
+            "vehicleNumber": "2673087",
+            "checkNumber": "6",
+            "evn": "50 85 26-73 087-6",
+            "parentEvn": null
+          },
+          "position": 7,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "E",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C,D",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B,C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "A",
+              "accessToPreviousVehicle": true
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "B,A",
+              "accessToPreviousVehicle": true
+            }
+          ],
+          "vehicleProperties": {
+            "length": 26.8,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 98,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": true,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": true,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        },
+        {
+          "vehicleIdentifier": {
+            "typeCode": 1055,
+            "typeCodeName": "Re450+",
+            "buildTypeCode": "91",
+            "countryCode": "85",
+            "vehicleNumber": "4450088",
+            "checkNumber": "0",
+            "evn": "91 85 4 450 088-0",
+            "parentEvn": null
+          },
+          "position": 8,
+          "number": 0,
+          "formationVehicleAtScheduledStops": [
+            {
+              "stopPoint": {
+                "uic": 8503424,
+                "name": "Schaffhausen"
+              },
+              "stopTime": {
+                "arrivalTime": null,
+                "departureTime": "2025-07-22T06:46:00+02:00"
+              },
+              "track": "1",
+              "sectors": "C,D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503423,
+                "name": "Neuhausen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:49:00+02:00",
+                "departureTime": "2025-07-22T06:49:00+02:00"
+              },
+              "track": "3",
+              "sectors": "D",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506039,
+                "name": "Schloss Laufen am Rheinfall"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:51:00+02:00",
+                "departureTime": "2025-07-22T06:51:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506049,
+                "name": "Dachsen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:53:00+02:00",
+                "departureTime": "2025-07-22T06:54:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506048,
+                "name": "Marthalen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T06:59:00+02:00",
+                "departureTime": "2025-07-22T06:59:00+02:00"
+              },
+              "track": "2",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506047,
+                "name": "Andelfingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:05:00+02:00",
+                "departureTime": "2025-07-22T07:05:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506046,
+                "name": "Henggart"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:08:00+02:00",
+                "departureTime": "2025-07-22T07:08:00+02:00"
+              },
+              "track": "1",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506045,
+                "name": "Hettlingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:12:00+02:00",
+                "departureTime": "2025-07-22T07:12:00+02:00"
+              },
+              "track": "2",
+              "sectors": null,
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8506000,
+                "name": "Winterthur"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:19:00+02:00",
+                "departureTime": "2025-07-22T07:22:00+02:00"
+              },
+              "track": "7",
+              "sectors": "E,F",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503147,
+                "name": "Stettbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:33:00+02:00",
+                "departureTime": "2025-07-22T07:34:00+02:00"
+              },
+              "track": "1",
+              "sectors": "D,E",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503003,
+                "name": "Zürich Stadelhofen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:38:00+02:00",
+                "departureTime": "2025-07-22T07:39:00+02:00"
+              },
+              "track": "2",
+              "sectors": "C",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503000,
+                "name": "Zürich HB"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:42:00+02:00",
+                "departureTime": "2025-07-22T07:44:00+02:00"
+              },
+              "track": "41/42",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503020,
+                "name": "Zürich Hardbrücke"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:46:00+02:00",
+                "departureTime": "2025-07-22T07:46:00+02:00"
+              },
+              "track": "4",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503001,
+                "name": "Zürich Altstetten"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:50:00+02:00",
+                "departureTime": "2025-07-22T07:50:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503509,
+                "name": "Schlieren"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:53:00+02:00",
+                "departureTime": "2025-07-22T07:53:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503512,
+                "name": "Glanzenberg"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:56:00+02:00",
+                "departureTime": "2025-07-22T07:56:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503508,
+                "name": "Dietikon"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T07:59:00+02:00",
+                "departureTime": "2025-07-22T08:00:00+02:00"
+              },
+              "track": "3",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503506,
+                "name": "Killwangen-Spreitenbach"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:03:00+02:00",
+                "departureTime": "2025-07-22T08:04:00+02:00"
+              },
+              "track": "4",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503511,
+                "name": "Neuenhof"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:06:00+02:00",
+                "departureTime": "2025-07-22T08:06:00+02:00"
+              },
+              "track": "1",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503505,
+                "name": "Wettingen"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:09:00+02:00",
+                "departureTime": "2025-07-22T08:10:00+02:00"
+              },
+              "track": "5",
+              "sectors": "B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503504,
+                "name": "Baden"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:12:00+02:00",
+                "departureTime": "2025-07-22T08:13:00+02:00"
+              },
+              "track": "3",
+              "sectors": "C,B",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8503503,
+                "name": "Turgi"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:18:00+02:00",
+                "departureTime": "2025-07-22T08:18:00+02:00"
+              },
+              "track": "4",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            },
+            {
+              "stopPoint": {
+                "uic": 8500309,
+                "name": "Brugg AG"
+              },
+              "stopTime": {
+                "arrivalTime": "2025-07-22T08:23:00+02:00",
+                "departureTime": null
+              },
+              "track": "2",
+              "sectors": "A",
+              "accessToPreviousVehicle": false
+            }
+          ],
+          "vehicleProperties": {
+            "length": 18.4,
+            "fromStop": {
+              "uic": 8503424,
+              "name": "Schaffhausen"
+            },
+            "toStop": {
+              "uic": 8506000,
+              "name": "Schaffhausen"
+            },
+            "numberRestaurantSpace": 0,
+            "numberBeds": 0,
+            "numberBikeHooks": 0,
+            "number1class": 0,
+            "number2class": 0,
+            "bikePlatform": false,
+            "emergencyCallSystem": false,
+            "lowFloorTrolley": false,
+            "climated": false,
+            "closed": false,
+            "vehicleWillBePutAway": false,
+            "trolleyStatus": "Normal",
+            "accessibilityProperties": {
+              "numberWheelchairSpaces": 0,
+              "numberWheelchairSpaces1class": 0,
+              "numberWheelchairSpaces2class": 0,
+              "wheelchairToilet": false,
+              "wheelchairAccessibleRestaurant": false,
+              "disabledCompartment": false,
+              "wheelchairSymbolProperties": {
+                "foldingRamp": false,
+                "heightBoardingPlatform": 0,
+                "gapBridging": false
+              }
+            },
+            "pictoProperties": {
+              "wheelchairPicto": false,
+              "bikePicto": false,
+              "strollerPicto": false,
+              "familyZonePicto": false,
+              "businessZonePicto": false
+            },
+            "vehicleRelation": null
+          }
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "vehicleRelationshipDetails": {
+        "relationshipType": "W",
+        "direction": "N",
+        "stopPoint": {
+          "uic": 8500309,
+          "name": "Brugg AG"
+        }
+      },
+      "advancedJourneyInformation1": {
+        "journeyMetaInformation": {
+          "operationDate": "2025-07-22",
+          "SJYID": "ch:1:sjyid:100001:19233-001"
+        },
+        "trainMetaInformation": {
+          "trainNumber": 19233,
+          "toCode": "11",
+          "runs": null
+        }
+      },
+      "advancedJourneyInformation2": null
+    },
+    {
+      "vehicleRelationshipDetails": {
+        "relationshipType": "W",
+        "direction": "V",
+        "stopPoint": {
+          "uic": 8503424,
+          "name": "Schaffhausen"
+        }
+      },
+      "advancedJourneyInformation1": {
+        "journeyMetaInformation": {
+          "operationDate": "2025-07-22",
+          "SJYID": "ch:1:sjyid:100001:20318-001"
+        },
+        "trainMetaInformation": {
+          "trainNumber": 20318,
+          "toCode": "11",
+          "runs": null
+        }
+      },
+      "advancedJourneyInformation2": null
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwissTF - Recent</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  </head>
+  <body>
+    <div class="wholeThing">
+      <%- include("partials/navbar") %>
+      <div class="firstBit">
+        <div class="flex-container">
+          <div class="recent-banner">
+            <h2>Recent Searches</h2>
+          </div>
+          <ul class="recent-list">
+            <% if (recentSearches.length === 0) { %>
+            <li class="recent-item">No recent searches available.</li>
+            <% } else { %>
+            <% recentSearches.forEach((search, index) => { %>
+            <li class="recent-item">
+              <div class="recent-header">
+                <a href="#" class="train-toggle" data-index="<%= index %>">
+                  <% let evuName;
+                    switch (search.evu) {
+                    case "SBBP":
+                    evuName = "SBB";
+                    break;
+                    case "BLSP":
+                    evuName = "BLS";
+                    break;
+                    case "MBC":
+                    evuName = "MBC";
+                    break;
+                    case "OeBB":
+                    evuName = "ÖBB";
+                    break;
+                    case "RhB":
+                    evuName = "RhB";
+                    break;
+                    case "SOB":
+                    evuName = "SOB";
+                    break;
+                    case "THURBO":
+                    evuName = "THURBO";
+                    break;
+                    case "TPF":
+                    evuName = "TPF";
+                    break;
+                    case "TRN":
+                    evuName = "TRN";
+                    break;
+                    case "VDBB":
+                    evuName = "VDBB";
+                    break;
+                    case "ZB":
+                    evuName = "ZB";
+                    break;
+                    default:
+                    evuName = search.evu; // fallback to original code
+                    } %>
+                  <%= evuName %> #<%= search.trainNumber %>
+                </a>
+                <div class="operation-date"><%= new Date(search.operationDate).toLocaleDateString("en-CH", { timeZone: "Europe/Zurich" }) %></div>
+              </div>
+              <div class="recent-card" id="recent-card-<%= index %>">
+                <div class="card-header">
+                  <button class="toggle-formation" data-index="<%= index %>">►</button>
+                  <div class="primary-vehicles" id="primary-vehicles-<%= index %>"><%= primaryVehicles[index] %></div>
+                </div>
+                <div class="formation-details" id="formation-<%= index %>">
+                  <% if (search.response.status == 200 && search.response.service.formations[0].formationVehicles?.length) { %>
+                    <ul>
+                      <% search.response.service.formations[0].formationVehicles.forEach(vehicle => { %>
+                      <% const backupEvn = vehicle.vehicleIdentifier.buildTypeCode && vehicle.vehicleIdentifier.countryCode && vehicle.vehicleIdentifier.vehicleNumber && vehicle.vehicleIdentifier.checkNumber ? vehicle.vehicleIdentifier.buildTypeCode + vehicle.vehicleIdentifier.countryCode + vehicle.vehicleIdentifier.vehicleNumber + vehicle.vehicleIdentifier.checkNumber: `Unknown vehicle (type ${vehicle.vehicleIdentifier.typeCodeName})`; %>
+                      <li class="evn"><%= vehicle.vehicleIdentifier.evn || vehicle.vehicleIdentifier.parentEvn || backupEvn %></li>
+                      <% }) %>
+                    </ul>
+                  <% } else { %>
+                    <p>No formation data available.</p>
+                  <% } %>
+                </div>
+                <div class="card-footer">
+                  <div></div>
+                  <div class="search-date">searched on <%= new Date(search.cachedAt).toLocaleString("en-CH", { timeZone: "Europe/Zurich" }) %></div>
+                </div>
+              </div>
+            </li>
+            <% }) %>
+            <% } %>
+          </ul>
+          <script nonce="<%= nonce %>" type="module">
+            import { formatEVN } from '/shared/formatEVN.js';
+
+            document.addEventListener("DOMContentLoaded", () => {
+              document.querySelectorAll(".evn").forEach((el) => {
+                el.textContent = formatEVN(el.textContent);
+              });
+
+              document.querySelectorAll(".train-toggle").forEach(toggle => {
+                toggle.addEventListener("click", e => {
+                  e.preventDefault();
+                  const index = toggle.dataset.index;
+                  const card = document.getElementById(`recent-card-${index}`);
+                  card.classList.toggle("hidden");
+                });
+              });
+
+              document.querySelectorAll(".toggle-formation").forEach(button => {
+                button.addEventListener("click", () => {
+                  const index = button.dataset.index;
+                  const formationDiv = document.getElementById(`formation-${index}`);
+                  const isVisible = formationDiv.style.display === "block";
+                  formationDiv.style.display = isVisible ? "none" : "block";
+                  button.textContent = isVisible ? "►" : "▼";
+                });
+              });
+            });
+          </script>
+        </div>
+      </div>
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>

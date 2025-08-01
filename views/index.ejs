@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwissTF - Home</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="wholeThing">
+      <%- include("partials/navbar") %>
+      <div class="top-section">
+        <div class="banner"> Swiss Train Formations </div>
+        <form class="search-form" action="/submit" method="post">
+          <label for="evu">Operator:</label>
+					<% const evuOptions = [
+						{ value: "SBBP", label: "SBB" },
+						{ value: "BLSP", label: "BLS" },
+						{ value: "MBC", label: "MBC" },
+						{ value: "OeBB", label: "ÖBB" },
+						{ value: "RhB", label: "RhB" },
+						{ value: "SOB", label: "SOB" },
+						{ value: "THURBO", label: "THURBO" },
+						{ value: "TPF", label: "TPF" },
+						{ value: "TRN", label: "TRN" },
+						{ value: "VDBB", label: "VDBB" },
+						{ value: "ZB", label: "ZB" }
+					]; %>       
+					<select name="evu" id="evu" required>
+						<% evuOptions.forEach(opt => { %>
+							<option value="<%= opt.value %>" <%= selectedEVU === opt.value ? "selected" : "" %>>
+								<%= opt.label %>
+							</option>
+						<% }); %>
+					</select>
+          <br>
+          <br>
+          <label for="operationDate">Date:</label>
+          <select name="operationDate" id="operationDate" required></select>
+          <br>
+          <br>
+          <label for="trainNumber">Train Number:</label>
+          <input type="text" name="trainNumber" id="trainNumber" required>
+          <br>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+        <script nonce="<%= nonce %>">
+          const select = document.getElementById('operationDate');
+          const labels = ['Today', '+1 day', '+2 days'];
+          const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            timeZone: 'Europe/Zurich'
+          };
+          const formatter = new Intl.DateTimeFormat('en-CA', options); // gives YYYY-MM-DD format
+          const now = new Date();
+          const selectedDate = "<%= selectedDate || '' %>";
+          for (let i = 0; i < 3; i++) {
+            const date = new Date(now);
+            date.setDate(date.getDate() + i);
+            // Format the date for Zurich timezone
+            const formatted = formatter.format(date); // format: YYYY-MM-DD
+            const option = document.createElement('option');
+            option.value = formatted;
+            option.textContent = `${labels[i]} (${formatted})`;
+            if (formatted === selectedDate) {
+              option.selected = true;
+            }
+            select.appendChild(option);
+          }
+        </script>
+      </div><% if (typeof errorMessage != "undefined") { %> <div id="error-banner" class="error-banner">
+        <script nonce="<%= nonce %>">
+          let errorMessage = '<%= errorMessage %>';
+          const banner = document.getElementById("error-banner");
+          banner.textContent = errorMessage;
+          banner.style.display = "block";
+        </script>
+      </div><% } %> <div><% if (typeof serviceData != "undefined") { %> <section class="vehicle-section">
+          <h2>Train Formation: #<%= serviceData.trainNumber %> </h2>
+          <h4><%= serviceData.trainJourney %> </h4>
+          <div class="vehicle-list" id="vehicle-list"></div>
+          <script nonce="<%= nonce %>" type="module">
+            import { formatEVN } from '/shared/formatEVN.js';
+            
+            const serviceData = <%- JSON.stringify(serviceData) %>;
+            const listContainer = document.getElementById("vehicle-list");
+            serviceData.vehicles.forEach(vehicle => {
+              const div = document.createElement("div");
+              div.className = "vehicle";
+              vehicle = formatEVN(vehicle);
+              if (vehicle.startsWith("91")) {
+                div.style.borderLeftColor = "#EB0000";
+              }
+              div.innerHTML = `<div class="vehicle-number">${vehicle}</div>`;
+              listContainer.appendChild(div);
+            });
+          </script>
+        </section><% } %> </div>
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>
