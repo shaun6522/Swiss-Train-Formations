@@ -180,9 +180,13 @@ button[type="submit"]:hover {
   display: none;
 }
 
-.footerLink {
+.footer-link {
   color: #e63946;
   text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 .recent-list {
