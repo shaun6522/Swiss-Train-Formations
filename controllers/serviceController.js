@@ -109,7 +109,7 @@ export async function handleSubmit(req, res) {
 
     // Remove duplicates, then strip the unique IDs from the unknown vehicles
     const vehicles = [...new Set(rawVehicles)].map((v) =>
-      v.replace(/^UV\d/, ""),
+      v.replace(/^UV\d+/, ""),
     );
 
     const serviceData = {
