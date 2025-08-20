@@ -1,4 +1,5 @@
 import { getDB } from "../db/mongoClient.js";
+import { getPrimaryVehicles } from "../shared/getPrimaryVehicles.js";
 import { getServiceDetails } from "../utils/getServiceDetails.js";
 import logger from "../utils/logger.js";
 
@@ -37,11 +38,16 @@ export async function getCachedOrFreshFormation(evu, date, trainNumber) {
     logger.info(
       `Fetching from API: /?evu=${query.evu}&operationDate=${query.operationDate}&trainNumber=${query.trainNumber}`,
     );
+
+    const primaryVehicles = getPrimaryVehicles(
+      freshData.service.formations[0].formationVehicles,
+    );
+
     await collection.updateOne(
       query,
       {
         $set: {
-          response: freshData,
+          response: { ...freshData, primaryVehicles },
           cachedAt: now,
         },
       },

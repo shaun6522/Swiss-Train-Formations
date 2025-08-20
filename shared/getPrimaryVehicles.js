@@ -84,5 +84,5 @@ export function getPrimaryVehicles(vehicles) {
   // Remove duplicates
   const uniquePrimaryVehicles = [...new Set(primaryVehicles)];
 
-  return uniquePrimaryVehicles.join(" + ");
+  return uniquePrimaryVehicles;
 }

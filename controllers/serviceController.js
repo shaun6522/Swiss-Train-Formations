@@ -1,7 +1,6 @@
 import { formatEVN } from "../shared/formatEVN.js";
 import { getCachedOrFreshFormation } from "../db/getCachedOrFreshFormation.js";
 import { getDB } from "../db/mongoClient.js";
-import { getPrimaryVehicles } from "../shared/getPrimaryVehicles.js";
 import { getTrainJourney } from "../utils/getTrainJourney.js";
 import logger from "../utils/logger.js";
 import { validateInputs } from "../utils/validateInputs.js";
@@ -147,17 +146,7 @@ export async function renderRecentSearches(req, res) {
       .limit(50)
       .toArray();
 
-    // We get the primary vehicles here to avoid running the function client-side, which means we don't have to duplicate the function
-    const primaryVehicles = [];
-    // eslint-disable-next-line no-unused-vars
-    recentSearches.forEach((search, index) => {
-      const searchPrimaryVehicles = getPrimaryVehicles(
-        search.response.service.formations[0].formationVehicles,
-      );
-      primaryVehicles.push(searchPrimaryVehicles);
-    });
-
-    res.render("recent", { recentSearches, primaryVehicles });
+    res.render("recent", { recentSearches });
   } catch (err) {
     logger.error(`Error fetching recent searches: ${err}`);
 

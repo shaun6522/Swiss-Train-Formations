@@ -385,3 +385,11 @@ button[type="submit"]:hover {
 .hidden {
   display: none;
 }
+
+.vehicle-search {
+  background: #ddd;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
