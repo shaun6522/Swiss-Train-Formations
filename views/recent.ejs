@@ -14,14 +14,6 @@
           <div class="recent-banner">
             <h2>Recent Searches</h2>
           </div>
-          <div class="vehicle-search">
-            <form class="vehicle-search-form" id="vehicle-search-form">
-              <label for="vehicleSearchNumber">Search for vehicle:</label>
-              <input type="text" name="vehicleSearchNumber" id="vehicleSearchNumber" pattern="\d+" inputmode="numeric" required>
-              <button type="submit">Search</button>
-            </form>
-          </div>
-          <div class="search-results" id="search-results"></div>
           <ul class="recent-list">
             <% if (recentSearches.length === 0) { %>
             <li class="recent-item">No recent searches available.</li>
@@ -100,67 +92,6 @@
           </ul>
           <script nonce="<%= nonce %>" type="module">
             import { formatEVN } from '/shared/formatEVN.js';
-
-            const form = document.getElementById("vehicle-search-form");
-            const input = document.getElementById("vehicleSearchNumber");
-            const resultsContainer = document.getElementById("search-results");
-
-            input.addEventListener("keydown", (e) => {
-              if (
-                ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
-              ) return;
-
-              // Block non-digits
-              if (!/^\d$/.test(e.key)) {
-                e.preventDefault();
-              }
-            });
-
-            form.addEventListener("submit", async (e) => {
-              e.preventDefault(); // prevent page reload
-
-              const vehicleSearchNumber = document.getElementById("vehicleSearchNumber").value.trim();
-              if (!vehicleSearchNumber) return;
-
-              try {
-                const response = await fetch("/recent/search", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({ vehicleSearchNumber }),
-                });
-
-                const data = await response.json();
-
-                // Clear previous results
-                resultsContainer.innerHTML = "";
-
-                if (!data.matches || data.matches.length === 0) {
-                  resultsContainer.textContent = `No matches for ${vehicleSearchNumber}`;
-                  return;
-                }
-
-                // Header
-                const header = document.createElement("h3");
-                header.textContent = `Matches for ${vehicleSearchNumber}:`;
-                resultsContainer.appendChild(header);
-
-                // List matches
-                const ul = document.createElement("ul");
-                data.matches.forEach(match => {
-                  const li = document.createElement("li");
-                  // Customize: show service and date
-                  li.textContent = `${match.operationDate}: ${match.trainNumber}`;
-                  ul.appendChild(li);
-                });
-
-                resultsContainer.appendChild(ul);
-              } catch (err) {
-                console.error(err);
-                resultsContainer.innerHTML = `<p>Error fetching results.</p>`;
-              };
-            });
 
             document.addEventListener("DOMContentLoaded", () => {
               document.querySelectorAll(".evn").forEach((el) => {

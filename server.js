@@ -4,6 +4,7 @@ import crypto from "crypto";
 import path from "path";
 
 import bodyParser from "body-parser";
+import cron from "node-cron";
 import express from "express";
 import favicon from "serve-favicon";
 import helmet from "helmet";
@@ -60,6 +61,24 @@ app.use(
     },
   }),
 );
+
+
+
+// Cron job scheduling
+
+// Check the server status every 10 minutes
+//cron.schedule("*/10 * * * *", () => {
+//  checkServerStatus();
+//});
+
+// At 02:00 each day, run through the services.txt and get formation of all
+//cron.schedule("0 2 * * *", () => {
+//  getServicesFromTxt();  
+//});
+
+
+
+// Server start
 
 try {
   await mongoClient.connectToDB();

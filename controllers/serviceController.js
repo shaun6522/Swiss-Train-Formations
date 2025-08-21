@@ -157,6 +157,7 @@ export async function handleVehicleSearch(req, res) {
       .toArray();
 
     const serviceMatches = matches.map(m => ({
+      evu: m.evu,
       trainNumber: m.trainNumber,
       operationDate: m.operationDate
     }));

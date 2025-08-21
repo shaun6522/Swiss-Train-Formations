@@ -11,7 +11,17 @@
       <%- include("partials/navbar") %>
       <div class="top-section">
         <div class="banner"> Swiss Train Formations </div>
+        <form class="search-form" id="vehicle-search-form">
+          <h2>Vehicle Search</h2>
+          <label for="vehicleSearchNumber">Search for vehicle:</label>
+          <input type="text" name="vehicleSearchNumber" id="vehicleSearchNumber" pattern="\d+" inputmode="numeric" required>
+          <br>
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="vehicle-section" id="search-results"></div>
         <form class="search-form" action="/submit" method="post">
+          <h2>Train Search</h2>
           <label for="evu">Operator:</label>
 					<% const evuOptions = [
 						{ value: "SBBP", label: "SBB" },
@@ -46,6 +56,63 @@
           <button type="submit">Submit</button>
         </form>
         <script nonce="<%= nonce %>">
+          const form = document.getElementById("vehicle-search-form");
+          const input = document.getElementById("vehicleSearchNumber");
+          const resultsContainer = document.getElementById("search-results");
+
+          input.addEventListener("keydown", (e) => {
+            if (
+              ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+            ) return;
+
+            // Block non-digits
+            if (!/^\d$/.test(e.key)) {
+              e.preventDefault();
+            }
+          });
+
+          form.addEventListener("submit", async (e) => {
+            e.preventDefault(); // prevent page reload
+
+            const vehicleSearchNumber = document.getElementById("vehicleSearchNumber").value.trim();
+            if (!vehicleSearchNumber) return;
+
+            try {
+              const response = await fetch("/recent/search", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ vehicleSearchNumber }),
+              });
+
+              const data = await response.json();
+
+              // Clear previous results
+              resultsContainer.innerHTML = "";
+
+              if (!data.matches || data.matches.length === 0) {
+                resultsContainer.innerHTML = `<h4>No matches for ${vehicleSearchNumber}</h4>`;
+                return;
+              }
+
+              // Header
+              const header = document.createElement("h2");
+              header.textContent = `Matches for ${vehicleSearchNumber}:`;
+              resultsContainer.appendChild(header);
+
+              data.matches.forEach(match => {
+                const div = document.createElement("div");
+                div.className = "vehicle";
+                div.innerHTML = `<div class="vehicle-number">${match.operationDate}: ${match.evu} #${match.trainNumber}</div>`;
+                resultsContainer.appendChild(div);
+              });
+            } catch (err) {
+              console.error(err);
+              resultsContainer.innerHTML = `<h4>Error fetching results.</h4>`;
+            };
+          });
+
           const select = document.getElementById('operationDate');
           const labels = ['Today', '+1 day', '+2 days'];
           const options = {

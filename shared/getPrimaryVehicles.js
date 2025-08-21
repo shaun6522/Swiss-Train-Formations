@@ -28,7 +28,7 @@ export function getPrimaryVehicles(vehicles) {
        OeBB locos will start 9181
        SBB/BLS locos will start 91854
        ZB locos will start 9085
-       SBB/SOB/THURBO/ZB units will start 9385 or 9485
+       SBB/SOB/THURBO/ZB units will start 9385 or 9485. 610s need to be 6100xx
        BLS units will start 00005 or 000075. 515s/525s need to be 5150xx/5250xx
        RhB units are weird, they will start 8085 but the EVN contains an extra 0
 
@@ -44,7 +44,7 @@ export function getPrimaryVehicles(vehicles) {
         extract: (s) => s.substring(4, 11),
       },
       {
-        prefixes: ["94857515", "000005251"],
+        prefixes: ["938556101", "94857515", "000005251"],
         extract: (s) => s.substring(5, 8) + "0" + s.substring(9, 11),
       },
       {
@@ -54,7 +54,6 @@ export function getPrimaryVehicles(vehicles) {
           "91854",
           "938515010",
           "93851503",
-          "938556101",
           "9485",
           "000005281",
           "000005351",
