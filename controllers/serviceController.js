@@ -131,6 +131,43 @@ export async function handleSubmit(req, res) {
   }
 }
 
+export async function handleVehicleSearch(req, res) {
+  try {
+    const { vehicleSearchNumber } = req.body;
+
+    if (!vehicleSearchNumber) {
+      return res.redirect("/recent");
+    }
+
+    // Check the vehicle number contains only digits
+    const vehicleNumSanitized = vehicleSearchNumber.trim();
+    if (
+      !/^\d{1,6}$/.test(vehicleNumSanitized) ||
+      vehicleNumSanitized.startsWith("0")
+    ) {
+      logger.warn("Validation error: invalid vehicle number");
+      return res.redirect("/recent");
+    }
+
+    const db = getDB();
+    const collection = db.collection("formations");
+
+    const matches = await collection
+      .find({ "response.primaryVehicles": vehicleNumSanitized })
+      .toArray();
+
+    const serviceMatches = matches.map(m => ({
+      trainNumber: m.trainNumber,
+      operationDate: m.operationDate
+    }));
+
+    return res.json({ matches: serviceMatches });
+  } catch (err) {
+    logger.error(`Error searching vehicle: ${err}`);
+    res.status(500).render("500", { errorMessage: "Error searching vehicle" });
+  }
+}
+
 export function renderHome(req, res) {
   res.render("index", { selectedEVU: "SBBP", selectedDate: "" });
 }

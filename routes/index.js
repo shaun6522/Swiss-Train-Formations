@@ -2,6 +2,7 @@ import express from "express";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import {
   handleSubmit,
+  handleVehicleSearch,
   renderHome,
   renderRecentSearches,
   renderAbout,
@@ -10,10 +11,11 @@ import {
 const router = express.Router();
 
 router.get("/", asyncHandler(renderHome));
+router.get("/about", asyncHandler(renderAbout));
 router.get("/recent", asyncHandler(renderRecentSearches));
+router.post("/recent/search", asyncHandler(handleVehicleSearch));
 router.get("/submit", (req, res) => res.redirect("/"));
 router.post("/submit", asyncHandler(handleSubmit));
-router.get("/about", asyncHandler(renderAbout));
 
 // 404 fallback
 router.use((req, res) => {
