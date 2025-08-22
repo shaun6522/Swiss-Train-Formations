@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwissTF - Home</title>
     <link rel="stylesheet" href="/styles.css">
+    <script nonce="<%= nonce %>" type="module">
+      import { formatEVN } from '/shared/formatEVN.js';
+      import { getDisplayEVU } from "/shared/evuMap.js";
+
+      window.formatEVN = formatEVN;
+      window.getDisplayEVU = getDisplayEVU;
+    </script>
   </head>
   <body>
     <div class="wholeThing">
@@ -60,6 +67,16 @@
           const input = document.getElementById("vehicleSearchNumber");
           const resultsContainer = document.getElementById("search-results");
 
+          const options = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            timeZone: 'Europe/Zurich'
+          };
+          const formatter = new Intl.DateTimeFormat('en-CA', options); // format: YYYY-MM-DD
+          const now = new Date();
+          const dateToday = formatter.format(new Date(now));
+
           input.addEventListener("keydown", (e) => {
             if (
               ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
@@ -101,10 +118,15 @@
               header.textContent = `Matches for ${vehicleSearchNumber}:`;
               resultsContainer.appendChild(header);
 
-              data.matches.forEach(match => {
+              data.matches.slice().reverse().forEach(match => {
+                const displayEVU = getDisplayEVU(match.evu);
+
                 const div = document.createElement("div");
-                div.className = "vehicle";
-                div.innerHTML = `<div class="vehicle-number">${match.operationDate}: ${match.evu} #${match.trainNumber}</div>`;
+                div.className = "service-container";
+                div.innerHTML = `<div class="service-info">${match.operationDate}: ${displayEVU} #${match.trainNumber}</div>`;
+                if (match.operationDate === dateToday) {
+                  div.style.borderLeftColor = "#EB0000";
+                }
                 resultsContainer.appendChild(div);
               });
             } catch (err) {
@@ -115,14 +137,6 @@
 
           const select = document.getElementById('operationDate');
           const labels = ['Today', '+1 day', '+2 days'];
-          const options = {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            timeZone: 'Europe/Zurich'
-          };
-          const formatter = new Intl.DateTimeFormat('en-CA', options); // gives YYYY-MM-DD format
-          const now = new Date();
           const selectedDate = "<%= selectedDate || '' %>";
           for (let i = 0; i < 3; i++) {
             const date = new Date(now);
@@ -150,8 +164,6 @@
           <h4><%= serviceData.trainJourney %> </h4>
           <div class="vehicle-list" id="vehicle-list"></div>
           <script nonce="<%= nonce %>" type="module">
-            import { formatEVN } from '/shared/formatEVN.js';
-            
             const serviceData = <%- JSON.stringify(serviceData) %>;
             const listContainer = document.getElementById("vehicle-list");
             serviceData.vehicles.forEach(vehicle => {

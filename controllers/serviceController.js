@@ -156,10 +156,10 @@ export async function handleVehicleSearch(req, res) {
       .find({ "response.primaryVehicles": vehicleNumSanitized })
       .toArray();
 
-    const serviceMatches = matches.map(m => ({
+    const serviceMatches = matches.map((m) => ({
       evu: m.evu,
       trainNumber: m.trainNumber,
-      operationDate: m.operationDate
+      operationDate: m.operationDate,
     }));
 
     return res.json({ matches: serviceMatches });

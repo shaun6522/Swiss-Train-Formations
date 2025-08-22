@@ -12,6 +12,7 @@ import logger from "./utils/logger.js";
 import * as mongoClient from "./db/mongoClient.js";
 import { rateLimit } from "express-rate-limit";
 import routes from "./routes/index.js";
+import runMaintenanceTasks from "./utils/runMaintenanceTasks.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -25,6 +26,9 @@ const limiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 });
+
+let maintenanceMode = false;
+let serverRunning = false;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -45,6 +49,14 @@ app.use("/shared", express.static(path.join(__dirname, "shared")));
 
 app.use((req, res, next) => {
   logger.info(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
+
+  if (maintenanceMode) {
+    return res.status(503).render("maintenance", {
+      errorMessage:
+        "The server is currently down for maintenance. Please check back later",
+    });
+  }
+
   res.locals.nonce = crypto.randomBytes(16).toString("base64");
   res.locals.styleNonce = crypto.randomBytes(16).toString("base64");
   next();
@@ -62,8 +74,6 @@ app.use(
   }),
 );
 
-
-
 // Cron job scheduling
 
 // Check the server status every 10 minutes
@@ -72,11 +82,28 @@ app.use(
 //});
 
 // At 02:00 each day, run through the services.txt and get formation of all
-//cron.schedule("0 2 * * *", () => {
-//  getServicesFromTxt();  
-//});
+cron.schedule("0 2 * * *", () => {
+  if (serverRunning) {
+    logger.info("Entering maintenance mode..");
+    maintenanceMode = true;
 
-
+    runMaintenanceTasks()
+      .then((maintenanceError) => {
+        if (maintenanceError) {
+          logger.error(`Error performing maintenance: ${maintenanceError}`);
+        } else {
+          logger.info("Maintenance completed");
+        }
+      })
+      .catch((err) => {
+        logger.error(`Error performing maintenance: ${err.message || err}`);
+      })
+      .finally(() => {
+        logger.info("Exiting maintenance mode..");
+        maintenanceMode = false;
+      });
+  }
+});
 
 // Server start
 
@@ -96,10 +123,12 @@ try {
     logger.info(
       `Server listening on port ${port} in ${process.env.NODE_ENV} mode`,
     );
+    serverRunning = true;
   });
 
   process.on("SIGINT", async () => {
     logger.info("Shutting down server..");
+    serverRunning = false;
     await mongoClient.closeDB();
     server.close(() => {
       process.exit(0);

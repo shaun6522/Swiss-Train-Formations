@@ -386,10 +386,20 @@ button[type="submit"]:hover {
   display: none;
 }
 
-.vehicle-search {
-  background: #ddd;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
+.service-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-left: 6px solid #b7b7b7;
+  border-radius: 4px;
+  padding: 10px 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-info {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #151515;
+  align-items: center;
 }
