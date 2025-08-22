@@ -3,6 +3,7 @@ import { getCachedOrFreshFormation } from "../db/getCachedOrFreshFormation.js";
 import { getDB } from "../db/mongoClient.js";
 import { getTrainJourney } from "../utils/getTrainJourney.js";
 import logger from "../utils/logger.js";
+import { sendContactEmail } from "../utils/emailHandler.js";
 import { validateInputs } from "../utils/validateInputs.js";
 
 export async function handleSubmit(req, res) {
@@ -169,6 +170,44 @@ export async function handleVehicleSearch(req, res) {
   }
 }
 
+export async function handleContactForm(req, res) {
+  try {
+    const { name, email, message } = req.body;
+
+    if (!name || !email || !message) {
+      return res.status(400).render("contact", {
+        errorMessage: "Please fill in all fields.",
+        formData: { name, email, message },
+      });
+    }
+
+    logger.info(`Contact form submitted by ${name} (${email}): ${message}`);
+    const emailSuccess = await sendContactEmail(name, email, message);
+
+    if (emailSuccess === true) {
+      return res.render("contact", {
+        success: true,
+        message: "Your message has been submitted successfully!",
+        formData: {},
+      });
+    } else {
+      logger.error(`Error handling contact form: ${emailSuccess}`);
+      return res.status(500).render("contact", {
+        success: false,
+        message: "Internal server error. Please try again later.",
+        formData: req.body,
+      });
+    }
+  } catch (err) {
+    logger.error(`Error handling contact form: ${err}`);
+    return res.status(500).render("contact", {
+      success: false,
+      message: "Internal server error. Please try again later.",
+      formData: req.body,
+    });
+  }
+}
+
 export function renderHome(req, res) {
   res.render("index", { selectedEVU: "SBBP", selectedDate: "" });
 }
@@ -202,4 +241,8 @@ export async function renderRecentSearches(req, res) {
 
 export function renderAbout(req, res) {
   res.render("about");
+}
+
+export function renderContact(req, res) {
+  res.render("contact");
 }

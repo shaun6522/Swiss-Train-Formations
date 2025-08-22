@@ -3,15 +3,19 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import {
   handleSubmit,
   handleVehicleSearch,
+  handleContactForm,
   renderHome,
   renderRecentSearches,
   renderAbout,
+  renderContact,
 } from "../controllers/serviceController.js";
 
 const router = express.Router();
 
 router.get("/", asyncHandler(renderHome));
 router.get("/about", asyncHandler(renderAbout));
+router.get("/contact", asyncHandler(renderContact));
+router.post("/contact", asyncHandler(handleContactForm));
 router.get("/recent", asyncHandler(renderRecentSearches));
 router.post("/recent/search", asyncHandler(handleVehicleSearch));
 router.get("/submit", (req, res) => res.redirect("/"));

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwissTF - Contact</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  </head>
+  <body>
+    <div class="wholeThing">
+      <%- include("partials/navbar") %>
+      <div class="firstBit">
+        <div class="flex-container">
+          <div class="contact-banner">
+            <h2>Contact</h2>
+          </div>
+          <div class="contact-info">
+            <p>If you have any issues or queries please do let me know!</p>
+            <% if (typeof message != "undefined") { %> <div id="error-banner" class="error-banner">
+              <script nonce="<%= nonce %>">
+                let message = '<%= message %>';
+                const banner = document.getElementById("error-banner");
+                banner.textContent = message;
+                banner.style.display = "block";
+                <% if (success) { %>
+                banner.style.backgroundColor = "#d4edda";
+                banner.style.color = "#155724";
+                banner.style.border = "1px solid #155724";
+                <% } %>
+              </script>
+            </div><% } %>
+            <form id="contact-form" method="POST" action="/contact">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" maxlength="2000" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>

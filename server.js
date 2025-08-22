@@ -22,7 +22,7 @@ const port = process.env.PORT || 4000;
 
 const limiter = rateLimit({
   windowsMs: 1 * 60 * 1000,
-  max: 20,
+  max: 50,
   standardHeaders: true,
   legacyHeaders: false,
 });
