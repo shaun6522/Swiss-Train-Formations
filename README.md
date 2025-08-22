@@ -30,3 +30,4 @@ If you would like to run this yourself, you will need to specify the following i
 Optional:
 
 - PROXY_COUNT = how many proxies your server uses
+- EMAIL_USER, EMAIL_PASS for the contact page
