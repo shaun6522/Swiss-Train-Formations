@@ -11,10 +11,10 @@ export async function sendContactEmail(name, email, message) {
     });
 
     await transporter.sendMail({
-      from: `"Website Contact" <kaycee.pouros@ethereal.email>`,
+      from: `"Website Contact"`,
       to: process.env.RECEIVER_EMAIL,
       subject: `Contact form message from ${name}`,
-      text: email + ': ' + message,
+      text: email + ": " + message,
     });
     return true;
   } catch (err) {

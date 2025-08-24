@@ -83,26 +83,7 @@ app.use(
 
 // At 02:00 each day, run through the services.txt and get formation of all
 cron.schedule("0 2 * * *", () => {
-  if (serverRunning) {
-    logger.info("Entering maintenance mode..");
-    maintenanceMode = true;
-
-    runMaintenanceTasks()
-      .then((maintenanceError) => {
-        if (maintenanceError) {
-          logger.error(`Error performing maintenance: ${maintenanceError}`);
-        } else {
-          logger.info("Maintenance completed");
-        }
-      })
-      .catch((err) => {
-        logger.error(`Error performing maintenance: ${err.message || err}`);
-      })
-      .finally(() => {
-        logger.info("Exiting maintenance mode..");
-        maintenanceMode = false;
-      });
-  }
+  serverMaintenance();
 });
 
 // Server start
@@ -124,6 +105,7 @@ try {
       `Server listening on port ${port} in ${process.env.NODE_ENV} mode`,
     );
     serverRunning = true;
+    serverMaintenance();
   });
 
   process.on("SIGINT", async () => {
@@ -137,4 +119,27 @@ try {
 } catch (err) {
   logger.error(`Failed to start server: ${err}`);
   process.exit(1);
+}
+
+function serverMaintenance() {
+  if (serverRunning) {
+    logger.info("Entering maintenance mode..");
+    maintenanceMode = true;
+
+    runMaintenanceTasks()
+      .then((maintenanceError) => {
+        if (maintenanceError) {
+          logger.error(`Error performing maintenance: ${maintenanceError}`);
+        } else {
+          logger.info("Maintenance completed");
+        }
+      })
+      .catch((err) => {
+        logger.error(`Error performing maintenance: ${err.message || err}`);
+      })
+      .finally(() => {
+        logger.info("Exiting maintenance mode..");
+        maintenanceMode = false;
+      });
+  }
 }

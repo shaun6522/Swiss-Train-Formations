@@ -44,7 +44,18 @@ export function getPrimaryVehicles(vehicles) {
         extract: (s) => s.substring(4, 11),
       },
       {
-        prefixes: ["938556101", "94857515", "000005251"],
+        prefixes: [
+          "938556101",
+          "94851150",
+          "94852150",
+          "94853150",
+          "94854150",
+          "94855150",
+          "94856150",
+          "94857150",
+          "94857515",
+          "000005251",
+        ],
         extract: (s) => s.substring(5, 8) + "0" + s.substring(9, 11),
       },
       {
@@ -52,6 +63,7 @@ export function getPrimaryVehicles(vehicles) {
           "9085",
           "9180",
           "91854",
+          "938014",
           "938515010",
           "93851503",
           "9485",

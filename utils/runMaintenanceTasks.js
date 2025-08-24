@@ -26,7 +26,7 @@ export default async function runMaintenanceTasks() {
     let fileName;
 
     if (day === 0) {
-      fileName = "services_weekday.txt";
+      fileName = "services_sunday.txt";
     } else if (day === 6) {
       fileName = "services_saturday.txt";
     } else {
