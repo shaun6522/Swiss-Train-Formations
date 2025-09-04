@@ -330,10 +330,6 @@ button[type="submit"]:hover {
   flex-direction: column;
 }
 
-.search-form {
-  flex: 1;
-}
-
 .recent-card {
   display: block;
   margin-top:10px;
