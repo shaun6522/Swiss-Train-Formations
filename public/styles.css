@@ -404,11 +404,16 @@ button[type="submit"]:hover {
   align-items: center;
 }
 
+.search-form {
+    max-width: 100%;
+}
+
 .search-tabs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
+  min-width: 380px;
   width: 60%;
 }
 
