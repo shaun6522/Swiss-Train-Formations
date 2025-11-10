@@ -2,7 +2,6 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   background-color: #f4f7f8;
   margin: 0;
-  padding: 40px;
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -161,7 +160,6 @@ button[type="submit"]:hover {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .firstBit {
@@ -263,8 +261,13 @@ button[type="submit"]:hover {
   justify-content: flex-start;
   gap: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
   margin-bottom: 40px;
+}
+
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .nav-link {
