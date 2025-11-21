@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 import cron from "node-cron";
 import express from "express";
 import favicon from "serve-favicon";
+import handleSpreadsheetSubmission from "./utils/handleSpreadsheetSubmission.js";
 import helmet from "helmet";
 import logger from "./utils/logger.js";
 import * as mongoClient from "./db/mongoClient.js";
@@ -75,26 +76,24 @@ app.use(
 );
 
 function serverMaintenance() {
-  if (serverRunning) {
-    logger.info("Entering maintenance mode..");
-    maintenanceMode = true;
+  logger.info("Entering maintenance mode..");
+  maintenanceMode = true;
 
-    runMaintenanceTasks()
-      .then((maintenanceError) => {
-        if (maintenanceError) {
-          logger.error(`Error performing maintenance: ${maintenanceError}`);
-        } else {
-          logger.info("Maintenance completed");
-        }
-      })
-      .catch((err) => {
-        logger.error(`Error performing maintenance: ${err.message || err}`);
-      })
-      .finally(() => {
-        logger.info("Exiting maintenance mode..");
-        maintenanceMode = false;
-      });
-  }
+  runMaintenanceTasks()
+    .then((maintenanceError) => {
+      if (maintenanceError) {
+        logger.error(`Error performing maintenance: ${maintenanceError}`);
+      } else {
+        logger.info("Maintenance completed");
+      }
+    })
+    .catch((err) => {
+      logger.error(`Error performing maintenance: ${err.message || err}`);
+    })
+    .finally(() => {
+      logger.info("Exiting maintenance mode..");
+      maintenanceMode = false;
+    });
 }
 
 // Cron job scheduling
@@ -106,8 +105,17 @@ function serverMaintenance() {
 
 // At 02:00 each day, run through the services.txt and get formation of all
 cron.schedule("0 2 * * *", () => {
-  serverMaintenance();
+  if (serverRunning) {
+    serverMaintenance();
+  }
 });
+
+// At 05:00 each day, submit any listed services to the 55p spreadsheet (soon)
+/*cron.schedule ("0 5 * * *", () => {
+  if (serverRunning) {
+    handleSpreadsheetSubmission();
+  }
+});*/
 
 // Server start
 
@@ -128,6 +136,7 @@ try {
       `Server listening on port ${port} in ${process.env.NODE_ENV} mode`,
     );
     serverRunning = true;
+    handleSpreadsheetSubmission();
   });
 
   process.on("SIGINT", async () => {

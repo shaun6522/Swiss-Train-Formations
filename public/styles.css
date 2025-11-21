@@ -543,3 +543,17 @@ form button[type="submit"]:hover {
 #contact-form button[type="submit"]:hover {
   background-color: #357ab7;
 }
+
+.notice {
+  background-color: #ffe6e6;
+  color: #b00020;
+  border: 1px solid #b00020;
+  padding: 6px 10px;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px;
+  font-family: "Helvetica Neue", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
