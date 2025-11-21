@@ -2,8 +2,6 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   background-color: #f4f7f8;
   margin: 0;
-  display: flex;
-  justify-content: center;
   min-height: 100vh;
 }
 
@@ -82,8 +80,14 @@ button[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
+  .top-section {
     padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .firstBit {
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   form {
@@ -261,7 +265,7 @@ button[type="submit"]:hover {
   justify-content: flex-start;
   gap: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .navbar-wrapper {
