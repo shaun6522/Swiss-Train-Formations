@@ -258,7 +258,9 @@ export async function handleTrainComment(req, res) {
     logger.info(`Comment saved for ${operationDate} ${train}: ${comment}`);
     res.sendStatus(200);
   } else {
-    logger.error(`Failed to save comment for ${operationDate} ${train}: ${comment}`);
+    logger.error(
+      `Failed to save comment for ${operationDate} ${train}: ${comment}`,
+    );
     res.sendStatus(418);
   }
 }

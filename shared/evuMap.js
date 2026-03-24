@@ -13,7 +13,7 @@ export const evuMap = {
 };
 
 export const reverseEvuMap = Object.fromEntries(
-  Object.entries(evuMap).map(([key, value]) => [value, key])
+  Object.entries(evuMap).map(([key, value]) => [value, key]),
 );
 
 export function getDisplayEVU(evuCode) {

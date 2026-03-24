@@ -49,8 +49,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/shared", express.static(path.join(__dirname, "shared")));
 
 app.use((req, res, next) => {
-  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  logger.info(`[${new Date().toISOString()} ${ip}] ${req.method} ${req.originalUrl}`);
+  var ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+  logger.info(
+    `[${new Date().toISOString()} ${ip}] ${req.method} ${req.originalUrl}`,
+  );
 
   if (maintenanceMode) {
     return res.status(503).render("maintenance", {

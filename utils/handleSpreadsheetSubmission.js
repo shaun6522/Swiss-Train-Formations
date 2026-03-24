@@ -17,8 +17,8 @@ export default async function handleSpreadsheetSubmission() {
     const year = today.getFullYear();
 
     const datum = `${month}.${day}.${year}`;
-    const vlak = '4065_1';
-    const vlakova = '465008';
+    const vlak = "4065_1";
+    const vlakova = "465008";
 
     const postData = `datum=${date}&vlak=${vlak}&vlakova=${vlakova}&vlakovaZeme=ch&postrk=&postrkZeme=ch&priprez=&priprezZeme=ch&poznamka=&nick=SwissTF&from=`;
 
