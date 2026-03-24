@@ -69,7 +69,7 @@
                 <div class="card-header">
                   <button class="toggle-formation" data-index="<%= index %>">►</button>
                   <div class="primary-vehicles" id="primary-vehicles-<%= index %>"><%= Array.isArray(search.response.primaryVehicles) ? search.response.primaryVehicles.join(" + ") : (search.response.primaryVehicles || "No loco/unit found") %></div>
-                  <div class="comment" id="comment-<%= index %>"><%= search.comment %></div>
+                  <div class="comment" id="comment-<%= index %>"><%= search.response.comment %></div>
                 </div>
                 <div class="formation-details" id="formation-<%= index %>">
                   <% if (search.response.status == 200 && search.response.service.formations[0].formationVehicles?.length) { %>

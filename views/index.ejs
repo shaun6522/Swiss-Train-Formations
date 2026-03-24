@@ -189,6 +189,7 @@
       </div><% } %> <div><% if (typeof serviceData != "undefined") { %> <section class="vehicle-section">
           <h2>Train Formation: #<%= serviceData.trainNumber %> </h2>
           <h4><%= serviceData.trainJourney %> </h4>
+          <% if (serviceData.comment && serviceData.comment.trim() !== "") { %><h3 class="display-comment">User note: <%= serviceData.comment %></h3><% } %>
           <div class="vehicle-list" id="vehicle-list"></div>
           <script nonce="<%= nonce %>" type="module">
             const serviceData = <%- JSON.stringify(serviceData) %>;

@@ -117,6 +117,7 @@ export async function handleSubmit(req, res) {
       trainNumber: trainMetaInformation.trainNumber,
       vehicles,
       trainJourney: getTrainJourney(formations),
+      comment: serviceRequest.comment,
     };
 
     res.render("index", {

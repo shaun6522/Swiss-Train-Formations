@@ -33,14 +33,14 @@ export async function addCommentToTrain(train, operationDate, comment) {
 
   if (search.response.primaryVehicles.join(" + ") === comment.trim()) {
     await collection.updateOne(query, {
-      $unset: { comment: "" },
+      $unset: { "response.comment": "" },
     });
 
     return true;
   }
 
   await collection.updateOne(query, {
-    $set: { comment: comment },
+    $set: { "response.comment": comment },
   });
 
   return true;
