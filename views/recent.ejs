@@ -62,12 +62,14 @@
                     } %>
                   <%= evuName %> #<%= search.trainNumber %>
                 </a>
+                <a href="#" class="train-edit" data-index="<%= index %>">✎ Edit</a>
                 <div class="operation-date"><%= new Date(search.operationDate).toLocaleDateString("en-CH", { timeZone: "Europe/Zurich" }) %></div>
               </div>
               <div class="recent-card" id="recent-card-<%= index %>">
                 <div class="card-header">
                   <button class="toggle-formation" data-index="<%= index %>">►</button>
                   <div class="primary-vehicles" id="primary-vehicles-<%= index %>"><%= Array.isArray(search.response.primaryVehicles) ? search.response.primaryVehicles.join(" + ") : (search.response.primaryVehicles || "No loco/unit found") %></div>
+                  <div class="comment" id="comment-<%= index %>"><%= search.comment %></div>
                 </div>
                 <div class="formation-details" id="formation-<%= index %>">
                   <% if (search.response.status == 200 && search.response.service.formations[0].formationVehicles?.length) { %>
@@ -98,6 +100,13 @@
                 el.textContent = formatEVN(el.textContent);
               });
 
+              document.querySelectorAll(".comment").forEach((el) => {
+                if (el.textContent !== "") {
+                  const primaryDiv = el.parentElement.querySelector(".primary-vehicles");
+                  primaryDiv.style.textDecoration = "line-through";
+                }
+              });
+
               document.querySelectorAll(".train-toggle").forEach(toggle => {
                 toggle.addEventListener("click", e => {
                   e.preventDefault();
@@ -114,6 +123,45 @@
                   const isVisible = formationDiv.style.display === "block";
                   formationDiv.style.display = isVisible ? "none" : "block";
                   button.textContent = isVisible ? "►" : "▼";
+                });
+              });
+
+              document.querySelectorAll(".train-edit").forEach(button => {
+                button.addEventListener("click", e => {
+                  e.preventDefault();
+
+                  const btn = e.currentTarget;
+                  const index = button.dataset.index;
+
+                  const card = btn.closest(".recent-item");
+
+                  const train = card.querySelector(".train-toggle").textContent.trim();
+                  const rawOperationDate = card.querySelector(".operation-date").textContent.trim();
+                  const [day, month, year] = rawOperationDate.split(".");
+                  const operationDate = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+
+                  const comment = prompt("If the formation shown is incorrect, please enter the correct set/loco numbers (max 40 characters):").toString().substring(0, 40);
+
+                  if (comment !== "") {
+                    const response = fetch("/recent/comment", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                      body: JSON.stringify({
+                        train: train,
+                        operationDate: operationDate,
+                        comment: comment
+                      })
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                          location.reload();
+                        } else {
+                          alert("Error: failed to save comment");
+                        }
+                    });
+                  }
                 });
               });
             });

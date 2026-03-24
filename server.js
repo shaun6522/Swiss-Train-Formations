@@ -49,7 +49,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/shared", express.static(path.join(__dirname, "shared")));
 
 app.use((req, res, next) => {
-  logger.info(`[${new Date().toISOString()}] ${req.method} ${req.originalUrl}`);
+  var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  logger.info(`[${new Date().toISOString()} ${ip}] ${req.method} ${req.originalUrl}`);
 
   if (maintenanceMode) {
     return res.status(503).render("maintenance", {
@@ -136,7 +137,6 @@ try {
       `Server listening on port ${port} in ${process.env.NODE_ENV} mode`,
     );
     serverRunning = true;
-    handleSpreadsheetSubmission();
   });
 
   process.on("SIGINT", async () => {

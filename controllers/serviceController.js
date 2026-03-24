@@ -1,4 +1,5 @@
 import { formatEVN } from "../shared/formatEVN.js";
+import { addCommentToTrain } from "../db/addCommentToTrain.js";
 import { getCachedOrFreshFormation } from "../db/getCachedOrFreshFormation.js";
 import { getDB } from "../db/mongoClient.js";
 import { getTrainJourney } from "../utils/getTrainJourney.js";
@@ -245,4 +246,19 @@ export function renderAbout(req, res) {
 
 export function renderContact(req, res) {
   res.render("contact");
+}
+
+export async function handleTrainComment(req, res) {
+  const { train, operationDate, comment } = req.body;
+  logger.info(`Comment submitted for ${operationDate} ${train}: ${comment}`);
+
+  const result = await addCommentToTrain(train, operationDate, comment);
+
+  if (result) {
+    logger.info(`Comment saved for ${operationDate} ${train}: ${comment}`);
+    res.sendStatus(200);
+  } else {
+    logger.error(`Failed to save comment for ${operationDate} ${train}: ${comment}`);
+    res.sendStatus(418);
+  }
 }

@@ -4,6 +4,7 @@ import {
   handleSubmit,
   handleVehicleSearch,
   handleContactForm,
+  handleTrainComment,
   renderHome,
   renderRecentSearches,
   renderAbout,
@@ -18,6 +19,7 @@ router.get("/contact", asyncHandler(renderContact));
 router.post("/contact", asyncHandler(handleContactForm));
 router.get("/recent", asyncHandler(renderRecentSearches));
 router.post("/recent/search", asyncHandler(handleVehicleSearch));
+router.post("/recent/comment", asyncHandler(handleTrainComment));
 router.get("/submit", (req, res) => res.redirect("/"));
 router.post("/submit", asyncHandler(handleSubmit));
 

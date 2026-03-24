@@ -169,6 +169,12 @@ button[type="submit"]:hover {
 .firstBit {
   display: flex;
   margin: 0 auto;
+  background-color: #e5e5e5;
+  padding: 2px 20px;
+  border-radius: 0px 0px 12px 12px;
+  font-family: "Helvetica Neue", sans-serif;
+  border-bottom: 5px solid #a8a8a8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .error-banner {
@@ -560,4 +566,16 @@ form button[type="submit"]:hover {
   border-radius: 4px;
   font-family: "Helvetica Neue", sans-serif;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+  color:#333333;
+  font-size: 1em;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.train-edit {
+  margin-left: auto;
+  padding: 0px 8px;
 }

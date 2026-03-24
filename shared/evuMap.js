@@ -12,6 +12,14 @@ export const evuMap = {
   ZB: "ZB",
 };
 
+export const reverseEvuMap = Object.fromEntries(
+  Object.entries(evuMap).map(([key, value]) => [value, key])
+);
+
 export function getDisplayEVU(evuCode) {
   return evuMap[evuCode] || evuCode;
+}
+
+export function getActualEVU(evuCode) {
+  return reverseEvuMap[evuCode] || evuCode;
 }
