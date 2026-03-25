@@ -34,7 +34,10 @@ export async function addCommentToTrain(train, operationDate, comment) {
   const query = { evu, operationDate, trainNumber };
   const search = await collection.findOne(query);
 
-  if (search.response.primaryVehicles.join("+") === comment.trim().replace(/\s+/g, '')) {
+  if (
+    search.response.primaryVehicles.join("+") ===
+    comment.trim().replace(/\s+/g, "")
+  ) {
     await collection.updateOne(query, {
       $unset: { "response.comment": "" },
     });
