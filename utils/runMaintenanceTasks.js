@@ -6,7 +6,7 @@ import logger from "../utils/logger.js";
 
 export default async function runMaintenanceTasks() {
   try {
-    const BATCH_SIZE = 5;
+    const BATCH_SIZE = 50;
     const WAIT_TIME_MS = 60_100; // 1 minute + small delay
 
     // Before we start calling the API, wait for the potential timeout to pass
