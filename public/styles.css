@@ -592,4 +592,5 @@ form button[type="submit"]:hover {
 .train-edit {
   margin-left: auto;
   padding: 0px 8px;
+  text-decoration: none;
 }

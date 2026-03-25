@@ -1,8 +1,11 @@
 import { getDB } from "../db/mongoClient.js";
 import { getActualEVU } from "../shared/evuMap.js";
+import { replaceProfanities } from "no-profanity";
 import logger from "../utils/logger.js";
 
 export async function addCommentToTrain(train, operationDate, comment) {
+  comment = replaceProfanities(`${comment}`);
+
   const db = getDB();
   const collection = db.collection("formations");
 
@@ -31,7 +34,7 @@ export async function addCommentToTrain(train, operationDate, comment) {
   const query = { evu, operationDate, trainNumber };
   const search = await collection.findOne(query);
 
-  if (search.response.primaryVehicles.join(" + ") === comment.trim()) {
+  if (search.response.primaryVehicles.join("+") === comment.trim().replace(/\s+/g, '')) {
     await collection.updateOne(query, {
       $unset: { "response.comment": "" },
     });
