@@ -130,10 +130,13 @@
 
               data.matches.slice().reverse().forEach(match => {
                 const displayEVU = getDisplayEVU(match.evu);
+                userComment = "";
+
+                if (match.comment) userComment = ` - User note: ${match.comment}`;
 
                 const div = document.createElement("div");
                 div.className = "service-container";
-                div.innerHTML = `<div class="service-info">${match.operationDate}: ${displayEVU} #${match.trainNumber}</div>`;
+                div.innerHTML = `<div class="service-info">${match.operationDate}: ${displayEVU} #${match.trainNumber}${userComment}</div>`;
                 if (match.operationDate === dateToday) {
                   div.style.borderLeftColor = "#EB0000";
                 }
@@ -193,17 +196,54 @@
           <div class="vehicle-list" id="vehicle-list"></div>
           <script nonce="<%= nonce %>" type="module">
             const serviceData = <%- JSON.stringify(serviceData) %>;
+            // Make globally accessible
+            window.serviceData = serviceData;
             const listContainer = document.getElementById("vehicle-list");
             serviceData.vehicles.forEach(vehicle => {
               const div = document.createElement("div");
               div.className = "vehicle";
               vehicle = formatEVN(vehicle);
-              if (vehicle.startsWith("91")) {
+
+              //TODO: make this reflect primary vehicles
+              if (vehicle.startsWith("91") || vehicle.startsWith("90 85")) {
                 div.style.borderLeftColor = "#EB0000";
               }
               div.innerHTML = `<div class="vehicle-number">${vehicle}</div>`;
               listContainer.appendChild(div);
             });
+          </script>
+          <div class="add-comment">
+            <p>Formation incorrect? <a href="#" class="add-comment-button">Add a comment</a></p>
+          </div>
+          <script nonce="<%= nonce %>" type="module">
+            document.querySelectorAll(".add-comment-button").forEach(button => {
+                button.addEventListener("click", e => {
+                  e.preventDefault();
+
+                  const comment = prompt("If the formation shown is incorrect, please enter the correct set/loco numbers (max 40 characters):").toString().substring(0, 40);
+
+                  if (comment !== "") {
+                    const response = fetch("/recent/comment", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json"
+                      },
+                      body: JSON.stringify({
+                        train: `${window.serviceData.evu} #${window.serviceData.trainNumber}`,
+                        operationDate: window.serviceData.operationDate,
+                        comment: comment
+                      })
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                          alert("Comment saved");
+                        } else {
+                          alert("Error: failed to save comment");
+                        }
+                    });
+                  }
+                });
+              });
           </script>
         </section><% } %> </div>
       <%- include("partials/footer") %>

@@ -34,15 +34,25 @@ export async function addCommentToTrain(train, operationDate, comment) {
   const query = { evu, operationDate, trainNumber };
   const search = await collection.findOne(query);
 
-  if (
-    search.response.primaryVehicles.join("+") ===
-    comment.trim().replace(/\s+/g, "")
-  ) {
+  if (comment.trim().replace(/\s+/g, "") == "forcereset") {
     await collection.updateOne(query, {
       $unset: { "response.comment": "" },
     });
 
     return true;
+  }
+
+  if (search.response.primaryVehicles !== "No loco/unit found") {
+    if (
+      search.response.primaryVehicles.join("+") ===
+      comment.trim().replace(/\s+/g, "")
+    ) {
+      await collection.updateOne(query, {
+        $unset: { "response.comment": "" },
+      });
+
+      return true;
+    }
   }
 
   await collection.updateOne(query, {

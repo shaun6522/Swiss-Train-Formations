@@ -114,9 +114,11 @@ export async function handleSubmit(req, res) {
     );
 
     const serviceData = {
+      evu: sanitized.evu,
       trainNumber: trainMetaInformation.trainNumber,
       vehicles,
       trainJourney: getTrainJourney(formations),
+      operationDate: sanitized.operationDate,
       comment: serviceRequest.comment,
     };
 
@@ -163,6 +165,7 @@ export async function handleVehicleSearch(req, res) {
       evu: m.evu,
       trainNumber: m.trainNumber,
       operationDate: m.operationDate,
+      comment: m.response.comment,
     }));
 
     return res.json({ matches: serviceMatches });

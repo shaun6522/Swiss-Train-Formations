@@ -594,3 +594,10 @@ form button[type="submit"]:hover {
   padding: 0px 8px;
   text-decoration: none;
 }
+
+.add-comment p {
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
